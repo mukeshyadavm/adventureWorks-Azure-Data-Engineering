@@ -1,12 +1,12 @@
 [
-  {"file":"AdventureWorks_Customers.csv","table":"customers","type":"dim"},
-  {"file":"AdventureWorks_Products.csv","table":"products","type":"dim"},
-  {"file":"AdventureWorks_Product_Categories.csv","table":"product_categories","type":"dim"},
-  {"file":"AdventureWorks_Product_Subcategories.csv","table":"product_subcategories","type":"dim"},
-  {"file":"AdventureWorks_Territories.csv","table":"territories","type":"dim"},
-  {"file":"AdventureWorks_Calendar.csv","table":"calendar","type":"dim"},
+  {"file":"AdventureWorks_Customers.csv","table":"customers","type":"dim","loadType":"full"},
+  {"file":"AdventureWorks_Products.csv","table":"products","type":"dim","loadType":"full"},
+  {"file":"AdventureWorks_Product_Categories.csv","table":"product_categories","type":"dim","loadType":"full"},
+  {"file":"AdventureWorks_Product_Subcategories.csv","table":"product_subcategories","type":"dim","loadType":"full"},
+  {"file":"AdventureWorks_Territories.csv","table":"territories","type":"dim","loadType":"full"},
+  {"file":"AdventureWorks_Calendar.csv","table":"calendar","type":"dim","loadType":"full"},
 
-  {"file":"AdventureWorks_Sales_2015.csv","table":"sales_2015","type":"fact"},
-  {"file":"AdventureWorks_Sales_2016.csv","table":"sales_2016","type":"fact"},
-  {"file":"AdventureWorks_Sales_2017.csv","table":"sales_2017","type":"fact"}
+  {"file":"AdventureWorks_Sales_2015.csv","table":"sales_2015","type":"fact","loadType":"full"},
+  {"file":"AdventureWorks_Sales_2016.csv","table":"sales_2016","type":"fact","loadType":"full"},
+  {"file":"AdventureWorks_Sales_2017.csv","table":"sales_2017","type":"fact","loadType":"full"}
 ]
