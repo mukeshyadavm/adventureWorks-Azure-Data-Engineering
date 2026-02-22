@@ -167,8 +167,7 @@ This script uses explicit ADLS location:
 ```sql
 CREATE DATABASE IF NOT EXISTS bronze
 LOCATION 'abfss://bronze@storagedatalake9105.dfs.core.windows.net/adventureworks/_metastore/bronze.db';
----
-
+```
 ## 11. How to Run
 
 Run `01_ingest.py` in Databricks with an attached cluster.
@@ -178,3 +177,4 @@ Run `01_ingest.py` in Databricks with an attached cluster.
 ```python
 dbutils.fs.ls("abfss://raw@storagedatalake9105.dfs.core.windows.net/")
 dbutils.fs.ls("abfss://bronze@storagedatalake9105.dfs.core.windows.net/")
+
