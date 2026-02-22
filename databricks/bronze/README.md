@@ -169,9 +169,12 @@ CREATE DATABASE IF NOT EXISTS bronze
 LOCATION 'abfss://bronze@storagedatalake9105.dfs.core.windows.net/adventureworks/_metastore/bronze.db';
 ---
 
-##   11. How to Run
-Run 01_ingest.py from Databricks with a cluster attached.
-Recommended pre-checks:
+## 11. How to Run
+
+Run `01_ingest.py` in Databricks with an attached cluster.
+
+### Pre-checks
+
+```python
 dbutils.fs.ls("abfss://raw@storagedatalake9105.dfs.core.windows.net/")
 dbutils.fs.ls("abfss://bronze@storagedatalake9105.dfs.core.windows.net/")
-Then execute script/notebook.
