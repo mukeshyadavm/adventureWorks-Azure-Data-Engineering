@@ -138,7 +138,7 @@ The script checks whether the target path is an existing Delta table by testing 
 
 ### Practical behavior for fixed historical files
 
-For static source data (your current setup):
+For static source data ( current setup):
 
 - First run: full load (e.g., 56046 rows)
 - Subsequent runs: 0 rows loaded (expected)
@@ -160,15 +160,16 @@ This treats dimensions as latest snapshots at Bronze level.
 
 ## 10. Why `CREATE DATABASE ... LOCATION` Is Required
 
-In your workspace, default schema creation without `LOCATION` may attempt to write metadata under DBFS root (`/user/hive/warehouse`), which is blocked by policy.
+In my workspace, default schema creation without `LOCATION` may attempt to write metadata under DBFS root (`/user/hive/warehouse`), which is blocked by policy.
 
 This script uses explicit ADLS location:
 
 ```sql
 CREATE DATABASE IF NOT EXISTS bronze
 LOCATION 'abfss://bronze@storagedatalake9105.dfs.core.windows.net/adventureworks/_metastore/bronze.db';
+---
 
-11. How to Run
+##   11. How to Run
 Run 01_ingest.py from Databricks with a cluster attached.
 Recommended pre-checks:
 dbutils.fs.ls("abfss://raw@storagedatalake9105.dfs.core.windows.net/")
